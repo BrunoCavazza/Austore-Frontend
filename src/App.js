@@ -6,7 +6,7 @@ import Mobile from './Mobile/AppMobile.js';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: '#e0f7fa'}}>
       
         <BrowserView>
             <Desktop/>

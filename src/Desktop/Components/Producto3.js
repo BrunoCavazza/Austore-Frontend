@@ -26,14 +26,14 @@ export default function MediaCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://austore.com.ar/images/products/None-46bbe1f9-fa3e-42cc-ac1b-b74bb908cdf8.jpg"
+          image="https://austore.com.ar/images/products/None-71aff57f-f9ed-43de-8c4e-ed422bd778bf.jpg"
         />
         <CardContent>
-        <h1>CASCO AVX FS-908 TITANIO MATE</h1> 
-        
-         
+        <Typography variant="body1" gutterBottom>
+        BICICLETA ELÉCTRICA OKN 4 E
+          </Typography>
           <h2>
-            Precio: $16645.00
+            Precio: $206310.00
             </h2>
 
         </CardContent>

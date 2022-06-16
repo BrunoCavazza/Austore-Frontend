@@ -17,8 +17,31 @@ import HomeIcon from '@material-ui/icons/Home';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
+import { createTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import PropTypes from 'prop-types';
 import Inicio from './Inicio.js';
+import Categorias from './Categorias.js';
+import Test from './Listado.js'
+import DetalleProducto from './ProductoDetalle.js';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#212c6f',
+    },
+    secondary: {
+      main: '#4cadc4',
+    },
+    third: {
+      main: '#a4dcec',
+    },
+    fourth: {
+      main: '#E8E4D9',
+    },
+  },
+});
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -127,6 +150,20 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+  color1: {
+    color: '#fce041',
+    background: '##fce041',
+  },
+  color2: {
+    color: '#4cadc4',
+  },
+  color3: {
+    color: '#a4dcec',
+  },
+  color4: {
+    color: '#E8E4D9',
+  },
+
 }));
 
 export default function PrimarySearchAppBar() {
@@ -162,7 +199,7 @@ export default function PrimarySearchAppBar() {
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
-    <Menu
+    <Menu 
       anchorEl={anchorEl}
       anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       id={menuId}
@@ -178,7 +215,7 @@ export default function PrimarySearchAppBar() {
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
-    <Menu
+    <Menu 
       anchorEl={mobileMoreAnchorEl}
       anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       id={mobileMenuId}
@@ -187,7 +224,8 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
+      <ThemeProvider theme={theme}>
+      <MenuItem >
         <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
             <ShoppingCartIcon />
@@ -214,13 +252,14 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Profile</p>
       </MenuItem>
+      </ThemeProvider>
     </Menu>
   );
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar position="static" >
+        <Toolbar >
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -297,18 +336,61 @@ export default function PrimarySearchAppBar() {
         </Toolbar>
       </AppBar>
 
-      <TabPanel value={value} index={0}>
+      
+        <TabPanel value={value} index={0}>
+        
+      
+      <Grid container spacing={3}>
+        <Grid item xs>
+        </Grid>
+        <Grid item xs={9}>
+
            <Inicio/>
+
+           </Grid>
+        <Grid item xs>
+        </Grid>
+      </Grid>
+
           </TabPanel>
           <TabPanel value={value} index={1}>
-          Categorias
+          
+          <Grid container spacing={3}>
+        <Grid item xs>
+        </Grid>
+        <Grid item xs={8}>
+
+          <Categorias/>
+
+           </Grid>
+        <Grid item xs>
+        </Grid>
+      </Grid>
+          
           </TabPanel>
           <TabPanel value={value} index={2}>
-          Sobre nosotros
+          <Grid container spacing={3}>
+        <Grid item xs>
+        </Grid>
+        <Grid item xs={8}>
+
+        <DetalleProducto/>
+
+
+           </Grid>
+        <Grid item xs>
+        </Grid>
+      </Grid>
+          
           </TabPanel>
           <TabPanel value={value} index={3}>
-          Contacto
+            <Test/>
+          
           </TabPanel>
+
+
+       
+      
       {renderMobileMenu}
       {renderMenu}
     </div>

@@ -2,10 +2,11 @@ import React from 'react';
 //import { createTheme } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import Appbar from './Components/AppBar.js';
-import Grid from '@material-ui/core/Grid';
-import Banners from './Components/Banners.js';
-import Informacion from './Components/Info.js';
-import MenuProductos from './Components/TituloProductos.js'
+import Footer from './Components/Footer.js';
+//import Grid from '@material-ui/core/Grid';
+//import Banners from './Components/Banners.js';
+//import Informacion from './Components/Info.js';
+//import MenuProductos from './Components/TituloProductos.js'
 //import Producto from './Components/Producto.js';
 //import Categorias from './Components/Categorias.js';
 
@@ -37,20 +38,10 @@ export default function AutoGrid() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs>
-        </Grid>
-      </Grid>
-      <Grid container spacing={3}>
-        <Grid item xs>
-        </Grid>
-        <Grid item xs={9}>
+    
           < Appbar />
-        </Grid>
-        <Grid item xs>
-        </Grid>
-      </Grid>
-
+          < Footer />
+       
     
 
         

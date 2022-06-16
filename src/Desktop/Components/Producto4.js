@@ -26,14 +26,14 @@ export default function MediaCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://austore.com.ar/images/products/None-46bbe1f9-fa3e-42cc-ac1b-b74bb908cdf8.jpg"
+          image="https://austore.com.ar/images/products/None-b013a09d-44d5-4796-bc44-8a6f518f5ef9.jpg"
         />
         <CardContent>
-        <h1>CASCO AVX FS-908 TITANIO MATE</h1> 
-        
-         
+        <Typography variant="body1" gutterBottom>
+        MOTO OKINOI STREET 150
+          </Typography>
           <h2>
-            Precio: $16645.00
+            Precio: $248820.00
             </h2>
 
         </CardContent>

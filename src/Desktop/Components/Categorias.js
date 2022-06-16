@@ -2,26 +2,53 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
-import banner1 from '../../Static/BANNERS Austore/1.png';
-import banner2 from '../../Static/BANNERS Austore/2.png';
-import banner3 from '../../Static/BANNERS Austore/3.png';
+
+import general from '../../Static/Categorias/BannerGeneral.jpg';
+import motos from '../../Static/Categorias/BannerMoto.jpg';
+import cascos from '../../Static/Categorias/BannerCasco.jpg';
+import cubiertas from '../../Static/Categorias/BannerCubiertas.jpg';
+import bicicletas from '../../Static/Categorias/BannerBicicletas.jpg';
+import colchones from '../../Static/Categorias/BannerColchones.jpg';
+import monopatines from '../../Static/Categorias/BannerMonopatin.jpg';
+
 
 const images = [
   {
-    url: banner1,
-    title: 'Novedades',
+    url: general,
+    title: 'Todos los productos',
     width: '100%',
   },
   {
-    url: banner2,
-    title: 'Ofertas',
+    url: motos,
+    title: 'Motos',
     width: '60%',
   },
   {
-    url: banner3,
-    title: 'Tendencias',
+    url: cascos,
+    title: 'Accesorios',
     width: '40%',
   },
+  {
+    url: cubiertas,
+    title: 'Cubiertas',
+    width: '40%',
+  },
+  {
+    url: bicicletas,
+    title: 'Bicicletas',
+    width: '60%',
+  },
+  {
+    url: colchones,
+    title: 'Colchones',
+    width: '60%',
+  },
+  {
+    url: monopatines,
+    title: 'Monopatines',
+    width: '40%',
+  },
+  
 ];
 
 const useStyles = makeStyles((theme) => ({
