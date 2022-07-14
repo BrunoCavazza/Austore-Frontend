@@ -11,6 +11,7 @@ import Producto3 from './Producto3.js';
 import Producto4 from './Producto4.js';
 import Grid from '@material-ui/core/Grid';
 
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -49,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
-    height: 1100,
+    height: 1300,
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
@@ -91,22 +92,22 @@ export default function VerticalTabs() {
         <Producto1/>
         </Grid>
         <Grid item xs={6} sm={3}>
-        <Producto2/>
+        <Producto1/>
         </Grid>
         <Grid item xs={6} sm={3}>
-        <Producto3/>
+        <Producto1/>
         </Grid>
         <Grid item xs={6} sm={3}>
-        <Producto4/>
+        <Producto1/>
         </Grid>
         <Grid item xs={6} sm={3}>
-        <Producto4/>
+        <Producto1/>
         </Grid>
         <Grid item xs={6} sm={3}>
-        <Producto3/>
+        <Producto1/>
         </Grid>
         <Grid item xs={6} sm={3}>
-        <Producto2/>
+        <Producto1/>
         </Grid>
         <Grid item xs={6} sm={3}>
         <Producto1/>
@@ -114,7 +115,7 @@ export default function VerticalTabs() {
       </Grid>
       </TabPanel>
 
-      <TabPanel value={value} index={1}>
+      <TabPanel value={value} index={1} >
         Motos
       </TabPanel>
 

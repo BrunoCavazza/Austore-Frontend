@@ -258,7 +258,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" >
+      <AppBar position="static" style={{ background: '#001348' }}>
         <Toolbar >
           <IconButton
             edge="start"
@@ -293,8 +293,8 @@ export default function PrimarySearchAppBar() {
             >
               <LinkTab label="Inicio" href="/Inicio" {...a11yProps(0)} />
               <LinkTab label="Categorias" href="/Categorias" {...a11yProps(1)} />
-              <LinkTab label="Nosotros" href="/Nosotros" {...a11yProps(2)} />
-              <LinkTab label="Contacto" href="/Contacto" {...a11yProps(3)} />
+              <LinkTab label="TestProducto" href="/Nosotros" {...a11yProps(2)} />
+              <LinkTab label="Productos" href="/Productos" {...a11yProps(3)} />
             </Tabs>
           
           
@@ -340,17 +340,9 @@ export default function PrimarySearchAppBar() {
         <TabPanel value={value} index={0}>
         
       
-      <Grid container spacing={3}>
-        <Grid item xs>
-        </Grid>
-        <Grid item xs={9}>
 
            <Inicio/>
 
-           </Grid>
-        <Grid item xs>
-        </Grid>
-      </Grid>
 
           </TabPanel>
           <TabPanel value={value} index={1}>
@@ -368,20 +360,10 @@ export default function PrimarySearchAppBar() {
       </Grid>
           
           </TabPanel>
-          <TabPanel value={value} index={2}>
-          <Grid container spacing={3}>
-        <Grid item xs>
-        </Grid>
-        <Grid item xs={8}>
 
+          <TabPanel value={value} index={2}>
         <DetalleProducto/>
 
-
-           </Grid>
-        <Grid item xs>
-        </Grid>
-      </Grid>
-          
           </TabPanel>
           <TabPanel value={value} index={3}>
             <Test/>

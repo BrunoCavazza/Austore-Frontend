@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
-import Typography from '@material-ui/core/Typography';
 import banner1 from '../../Static/BANNERS Austore/1.png';
 import banner2 from '../../Static/BANNERS Austore/2.png';
 import banner3 from '../../Static/BANNERS Austore/3.png';
@@ -11,16 +10,19 @@ const images = [
     url: banner1,
     //title: 'Novedades',
     width: '100%',
+    link: 'https://api.whatsapp.com/send/?phone=5493518130381&text&type=phone_number&app_absent=0',
   },
   {
     url: banner2,
     //title: 'Ofertas',
     width: '60%',
+    link: 'https://api.whatsapp.com/send/?phone=5493518130381&text&type=phone_number&app_absent=0',
   },
   {
     url: banner3,
     //title: 'Tendencias',
     width: '40%',
+    link: 'https://api.whatsapp.com/send/?phone=5493518130381&text&type=phone_number&app_absent=0',
   },
 ];
 
@@ -114,11 +116,12 @@ export default function ButtonBases() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root}  href={classes.link}>
       {images.map((image) => (
         <ButtonBase
           focusRipple
           key={image.title}
+          href="https://api.whatsapp.com/send/?phone=5493518130381&text&type=phone_number&app_absent=0" target="_blank" // ACA funca el href 
           className={classes.image}
           focusVisibleClassName={classes.focusVisible}
           style={{
@@ -127,6 +130,7 @@ export default function ButtonBases() {
         >
           <span
             className={classes.imageSrc}
+            
             style={{
               backgroundImage: `url(${image.url})`,
             }}

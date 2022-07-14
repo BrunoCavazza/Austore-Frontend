@@ -17,6 +17,7 @@ const images = [
     url: general,
     title: 'Todos los productos',
     width: '100%',
+    locate: './ProductoDetalle.js',
   },
   {
     url: motos,
@@ -133,11 +134,11 @@ export default function ButtonBases() {
         <ButtonBase
           focusRipple
           key={image.title}
+          //aca insertar el routing
           className={classes.image}
           focusVisibleClassName={classes.focusVisible}
-          style={{
-            width: image.width,
-          }}
+          style={{width: image.width,}}
+          href={images.locate}
         >
           <span
             className={classes.imageSrc}
